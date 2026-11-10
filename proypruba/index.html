@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de inicio de sesión - Práctica universitaria de desarrollo web">
+    <title>Iniciar sesión | Mi Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="login-wrapper">
+        <section class="login-card" aria-labelledby="login-title">
+
+            <header class="login-header">
+                <svg class="login-header__icon" viewBox="0 0 24 24" width="56" height="56"
+                     fill="none" stroke="currentColor" stroke-width="1.5"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/>
+                </svg>
+                <h1 id="login-title">Bienvenido</h1>
+                <p class="login-header__subtitle">Inicia sesión para continuar</p>
+            </header>
+
+            <div id="global-message" class="global-message" role="alert" aria-live="polite" hidden></div>
+
+            <form id="login-form" novalidate>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m2 7 10 6 10-6"/>
+                        </svg>
+                        Correo electrónico
+                    </label>
+                    <input type="email" id="email" name="email"
+                           class="form-input" placeholder="tucorreo@ejemplo.com"
+                           autocomplete="email" required aria-describedby="email-error">
+                    <p id="email-error" class="field-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                             stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="4" y="11" width="16" height="10" rx="2"/>
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+                        </svg>
+                        Contraseña
+                    </label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password"
+                               class="form-input" placeholder="Mínimo 8 caracteres"
+                               autocomplete="current-password" required
+                               aria-describedby="password-error">
+                        <button type="button" id="toggle-password"
+                                class="toggle-password"
+                                aria-label="Mostrar contraseña" aria-pressed="false">
+                            <svg id="icon-eye-open" viewBox="0 0 24 24" width="20" height="20"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <svg id="icon-eye-closed" viewBox="0 0 24 24" width="20" height="20"
+                                 fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 aria-hidden="true" style="display:none;">
+                                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+                                <path d="m3 3 18 18"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="password-error" class="field-error" role="alert" hidden></p>
+                </div>
+
+                <div class="form-row">
+                    <div class="remember-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Recordar mi correo</label>
+                    </div>
+                    <a href="#" class="forgot-link" id="forgot-link">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn-login" id="btn-login">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="8" cy="15" r="4"/>
+                        <path d="m10.9 12.1 9-9"/>
+                        <path d="m15 7 3 3"/>
+                    </svg>
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+            <footer class="login-footer">
+                <p class="demo-hint">
+                    <strong>Demo:</strong> demo@ejemplo.com · Demo1234!
+                </p>
+            </footer>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
